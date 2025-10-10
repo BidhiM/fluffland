@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Obstacle
+  - prefabgenerate
+  - flowerbloom
+  - Flowerbloom
+  - flowerclose
+  - flowerbloomsize
+  - flowerclosesize
+  - flowerclosesize2
+  - flowerbloomsize2
+  - jugnu
+  - stone
+  - obstacle
+  - Toggle
+  - ToggleOff
+  - Anchor
+  - abovegr
+  - belowgr
+  - collidragon
+  - Entry
+  - Exit
+  - SpeedBoost
+  - SceneSlider
+  - TransitionPrefab
+  - SpawnPrefab
+  - Cake
+  - ShakeZone
+  - StopShakeZone
+  - fovincrease
+  - fovnormal
+  - scoreDisplay
+  - highScoreDisplay
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - ignorebloom
+  - nopostprocessing
+  - player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: midground
+    uniqueID: 381514989
+    locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 1192907863
+    locked: 0
+  m_RenderingLayers:
+  - Default
