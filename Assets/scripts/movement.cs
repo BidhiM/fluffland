@@ -45,6 +45,7 @@ public class movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
 
+        Debug.Log("Hello, WOrld!");
         angleInRadians = upwardAngle * Mathf.Deg2Rad;
         forwardDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
         currentSpeed = forwardSpeed;
