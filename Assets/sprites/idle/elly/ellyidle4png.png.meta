@@ -210,7 +210,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ellyidle4png_0: -1189004156281317327
+      ellyidle4png_1: -3875682289369997969
+      ellyidle4png_2: 1412574720986469793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
