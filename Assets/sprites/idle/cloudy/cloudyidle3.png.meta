@@ -185,7 +185,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cloudyidle3_0: -5104190067171764479
+      cloudyidle3_1: -3851604413790929291
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
