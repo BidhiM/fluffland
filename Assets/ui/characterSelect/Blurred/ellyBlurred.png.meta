@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 05292eb831e32d3429b606d84c98a0db
+guid: c4d5a892a0e793442b805dd1857380b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3412463704563631372
-    second: Gemini_Generated_Image_lehhenlehhenlehh 1_0
+      213: -184742387525291090
+    second: ellyBlurred_0
+  - first:
+      213: -6624212042559568002
+    second: ellyBlurred_1
+  - first:
+      213: -6286713628077288806
+    second: ellyBlurred_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +115,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gemini_Generated_Image_lehhenlehhenlehh 1_0
+      name: ellyBlurred_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 7026
-        height: 3673
+        x: 263
+        y: 82
+        width: 1253
+        height: 1430
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +134,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c05cd67c8a18b5f20800000000000000
-      internalID: 3412463704563631372
+      spriteID: ea3f89007c9af6df0800000000000000
+      internalID: -184742387525291090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ellyBlurred_1
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 203
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e774f5e6e321214a0800000000000000
+      internalID: -6624212042559568002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ellyBlurred_2
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 31
+        width: 145
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9298d1834b11c8a0800000000000000
+      internalID: -6286713628077288806
       vertices: []
       indices: 
       edges: []

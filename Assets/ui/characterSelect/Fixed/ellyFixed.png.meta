@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4a1eb48878b89aa4c8ac52c1ff37f68f
+guid: e64cbc2d135c9234780459ee86f8265b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6936463161520574284
-    second: Group 127_0
+      213: -4826821342652946119
+    second: ellyFixed_0
+  - first:
+      213: -1835630416971713249
+    second: ellyFixed_1
+  - first:
+      213: 2692590325200871911
+    second: ellyFixed_2
+  - first:
+      213: -2872281744372651021
+    second: ellyFixed_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +118,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Group 127_0
+      name: ellyFixed_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 704
-        height: 203
+        x: 255
+        y: 75
+        width: 1187
+        height: 1362
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4f44049e74434060800000000000000
-      internalID: 6936463161520574284
+      spriteID: 939a5ecff8fa30db0800000000000000
+      internalID: -4826821342652946119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ellyFixed_1
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 181
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f15bf718cd78686e0800000000000000
+      internalID: -1835630416971713249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ellyFixed_2
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 101
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1604382a00e5520800000000000000
+      internalID: 2692590325200871911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ellyFixed_3
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 25
+        width: 74
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb24d3b8fa9328d0800000000000000
+      internalID: -2872281744372651021
       vertices: []
       indices: 
       edges: []
@@ -160,8 +222,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Group 127_0: 6936463161520574284
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

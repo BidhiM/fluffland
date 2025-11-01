@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a1eb48878b89aa4c8ac52c1ff37f68f
+guid: 05292eb831e32d3429b606d84c98a0db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6936463161520574284
-    second: Group 127_0
+      213: 3412463704563631372
+    second: Gemini_Generated_Image_lehhenlehhenlehh 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Group 127_0
+      name: Gemini_Generated_Image_lehhenlehhenlehh 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 704
-        height: 203
+        width: 7026
+        height: 3673
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4f44049e74434060800000000000000
-      internalID: 6936463161520574284
+      spriteID: c05cd67c8a18b5f20800000000000000
+      internalID: 3412463704563631372
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Group 127_0: 6936463161520574284
+      Gemini_Generated_Image_lehhenlehhenlehh 1_0: 3412463704563631372
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
