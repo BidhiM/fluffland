@@ -14,6 +14,7 @@ public class CharacterSelectScript : MonoBehaviour
     [SerializeField] private Vector2 rightPosition = new Vector2(715f, -182f); // where the right guy stands awkwardly
     [SerializeField] private float transitionDuration = 0.25f; // how fast they yeet across the screen. 0.25f feels snappy enough. dont make it too slow.
     [SerializeField] private float offscreenBufferX = 400f; // how far off the screen we chuck em so nobody sees them spawning in. magic.
+    [SerializeField] private CharacterButtonHandler characterButtonHandler;
 
     // --- INTERNAL STATE, AKA THE MESS ---
     private bool isTransitioning = false; // are we currently in the middle of the big shuffle? yes/no
@@ -31,6 +32,12 @@ public class CharacterSelectScript : MonoBehaviour
         if (charactersFixed.Length != charactersBlurred.Length)
         {
             Debug.LogError("CRITICAL ERROR: 'charactersFixed' and 'charactersBlurred' arrays are not the same length. This will explode. Go fix it. Now.");
+            return;
+        }
+
+        if (!characterButtonHandler)
+        {
+            Debug.LogError("Character Button Handler not set.");
             return;
         }
 
@@ -89,6 +96,9 @@ public class CharacterSelectScript : MonoBehaviour
             // Same here. Nice.
             NavigateRight();
         }
+        
+        // set it initially so that its not just empty
+        changeDisplayedCharacterName();
     }
 
     // --- NEW PUBLIC METHODS ---
@@ -113,6 +123,7 @@ public class CharacterSelectScript : MonoBehaviour
             return offscreenSpawn; // everyone else, NARNIA.
         });
         currentIndex = nextIndex;
+        changeDisplayedCharacterName();
     }
 
     /// <summary>
@@ -133,6 +144,9 @@ public class CharacterSelectScript : MonoBehaviour
             return offscreenSpawn; // NARNIA.
         });
         currentIndex = nextIndex;
+
+        // change whatever the current displayed name is
+        changeDisplayedCharacterName();
     }
 
     // ----------------------------
@@ -316,7 +330,7 @@ public class CharacterSelectScript : MonoBehaviour
         if (charactersBlurred[index] != null)
             SetPositionInternal(charactersBlurred[index], pos);
     }
-    
+
     // this is the original SetLocalPosition logic, just renamed
     private void SetPositionInternal(GameObject obj, Vector2 pos)
     {
@@ -326,6 +340,12 @@ public class CharacterSelectScript : MonoBehaviour
             rt.anchoredPosition = pos;
         else
             obj.transform.localPosition = new Vector3(pos.x, pos.y, obj.transform.localPosition.z);
+    }
+
+    public void changeDisplayedCharacterName()
+    {
+        //no need for a check, checking in start alr
+        characterButtonHandler.changeDisplayedName(charactersFixed[currentIndex].name.Replace("Fixed", ""));
     }
     
     // --- ORIGINAL HELPERS ---
