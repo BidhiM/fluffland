@@ -96,9 +96,6 @@ public class CharacterSelectScript : MonoBehaviour
             // Same here. Nice.
             NavigateRight();
         }
-        
-        // set it initially so that its not just empty
-        changeDisplayedCharacterName();
     }
 
     // --- NEW PUBLIC METHODS ---
@@ -123,7 +120,7 @@ public class CharacterSelectScript : MonoBehaviour
             return offscreenSpawn; // everyone else, NARNIA.
         });
         currentIndex = nextIndex;
-        changeDisplayedCharacterName();
+        ChangeDisplayedCharacterName();
     }
 
     /// <summary>
@@ -146,7 +143,7 @@ public class CharacterSelectScript : MonoBehaviour
         currentIndex = nextIndex;
 
         // change whatever the current displayed name is
-        changeDisplayedCharacterName();
+        ChangeDisplayedCharacterName();
     }
 
     // ----------------------------
@@ -342,10 +339,15 @@ public class CharacterSelectScript : MonoBehaviour
             obj.transform.localPosition = new Vector3(pos.x, pos.y, obj.transform.localPosition.z);
     }
 
-    public void changeDisplayedCharacterName()
+    public void ChangeDisplayedCharacterName()
     {
         //no need for a check, checking in start alr
-        characterButtonHandler.changeDisplayedName(charactersFixed[currentIndex].name.Replace("Fixed", ""));
+        characterButtonHandler.ChangeDisplayedName(GetCurrentCharacterName());
+    }
+
+    public string GetCurrentCharacterName()
+    {
+        return charactersFixed[currentIndex].name.Replace("Fixed", "");
     }
     
     // --- ORIGINAL HELPERS ---

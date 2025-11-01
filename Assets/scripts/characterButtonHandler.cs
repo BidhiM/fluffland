@@ -1,12 +1,13 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class CharacterButtonHandler : MonoBehaviour
 {
     [SerializeField] private CharacterSelectScript selectionController;
     [SerializeField] private TMP_Text characterNameDisplayField;
     [SerializeField] private TMP_Text berryDisplay;
+    private bool selected = false;
     void Start()
     {
         if (!berryDisplay)
@@ -26,25 +27,32 @@ public class CharacterButtonHandler : MonoBehaviour
         }
 
         berryDisplay.text = PlayerPrefs.GetInt("berries", 0).ToString();
+        ChangeDisplayedName(selectionController.GetCurrentCharacterName()); // set it initially so its not blank
         //set the berries
     }
-
-    public void OnButtonClick()
+    public void rightButtonClick()
     {
-        GameObject clickedObject = EventSystem.current.currentSelectedGameObject;
-        if (clickedObject == null)
-        {
-            Debug.LogError("Clicked OBJ is null");
-            return;
-        }
-
-        if (clickedObject.name== "rightButton") selectionController.NavigateRight();
-        else if (clickedObject.name == "leftButton") selectionController.NavigateLeft();
+        selectionController.NavigateRight();
     }
 
-    public void changeDisplayedName(string name)
+    public void leftButtonClick()
     {
-        if (!characterNameDisplayField) return;
+        selectionController.NavigateLeft();
+    }
+
+    public void characterSelectButtonClick()
+    {
+        if (!selected)
+        {
+            PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
+            Debug.Log("Current Character");
+            SceneManager.LoadScene("SampleScene");
+            selected = true; // can't select more than once
+        }
+    }
+
+    public void ChangeDisplayedName(string name)
+    {
         characterNameDisplayField.text = name;
     }
 
