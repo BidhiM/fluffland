@@ -144,7 +144,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113756603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 288.85, y: -0.84000015}
-  m_SizeDelta: {x: 374.6, y: -23.349998}
+  m_AnchoredPosition: {x: 288.84988, y: -0.8399048}
+  m_SizeDelta: {x: 374.59998, y: -23.349976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &113756605
 MonoBehaviour:
@@ -820,7 +820,6 @@ RectTransform:
   - {fileID: 1245782647}
   - {fileID: 143358501}
   - {fileID: 1902479096}
-  - {fileID: 675640079}
   - {fileID: 1308981956}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1034,17 +1033,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675640078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.17888087, y: 1.3333333, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113756604}
-  m_Father: {fileID: 513064257}
+  m_Father: {fileID: 1902479096}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 462}
+  m_AnchoredPosition: {x: -45.614594, y: -1.3333435}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675640080
@@ -1166,7 +1165,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 706847376}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 116568604}
+        m_TargetAssemblyTypeName: CharacterButtonHandler, Assembly-CSharp
+        m_MethodName: characterSelectButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &706847376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1443,7 +1454,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116568604}
         m_TargetAssemblyTypeName: CharacterButtonHandler, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: rightButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1726,7 +1737,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 116568604}
         m_TargetAssemblyTypeName: CharacterButtonHandler, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: leftButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2235,11 +2246,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902479095}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 5.5903125, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 675640079}
   m_Father: {fileID: 513064257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}

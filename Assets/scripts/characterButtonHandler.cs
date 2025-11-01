@@ -32,12 +32,12 @@ public class CharacterButtonHandler : MonoBehaviour
     }
     public void rightButtonClick()
     {
-        selectionController.NavigateRight();
+        selectionController.NavigateLeft();
     }
 
     public void leftButtonClick()
     {
-        selectionController.NavigateLeft();
+        selectionController.NavigateRight();
     }
 
     public void characterSelectButtonClick()
@@ -45,8 +45,8 @@ public class CharacterButtonHandler : MonoBehaviour
         if (!selected)
         {
             PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
-            Debug.Log("Current Character");
-            SceneManager.LoadScene("SampleScene");
+            Debug.Log("Current Character " + PlayerPrefs.GetString("character"));
+            SceneManager.LoadSceneAsync("MAINMENUNEW");
             selected = true; // can't select more than once
         }
     }

@@ -41,8 +41,29 @@ public class CharacterSelectScript : MonoBehaviour
             return;
         }
 
+        // --- NEW LOGIC: Load the saved character ---
+        // read from playerprefs to see who we should start on.
+        string savedCharacterName = PlayerPrefs.GetString("character");
+        if (!string.IsNullOrEmpty(savedCharacterName))
+        {
+            // we have a saved name. let's find its index.
+            // if we don't find it, currentIndex just stays 0. no big deal.
+            for (int i = 0; i < charactersFixed.Length; i++)
+            {
+                // use the same logic as GetCurrentCharacterName to get the base name
+                if (charactersFixed[i].name.Replace("Fixed", "") == savedCharacterName)
+                {
+                    currentIndex = i; // found it. this is our star.
+                    break; // stop looking. we're done here.
+                }
+            }
+        }
+        // --- END NEW LOGIC ---
+
+
         // just throw everyone where they're supposed to be at the start. the calm before the storm.
         // middle guy in the middle, left on left, right on right. everyone else? NARNIA.
+        // this loop now uses the 'currentIndex' we just loaded.
         for (int i = 0; i < charactersFixed.Length; i++)
         {
             charactersFixed[i].SetActive(true);
@@ -74,6 +95,10 @@ public class CharacterSelectScript : MonoBehaviour
                 SetActiveState(i, false, false); // poof. gone.
             }
         }
+        
+        // --- NEW ---
+        // Make sure the nameplate is correct on launch.
+        ChangeDisplayedCharacterName();
     }
 
     void Update()
