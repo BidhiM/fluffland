@@ -81,6 +81,7 @@ public class MainMenuController : MonoBehaviour
     public void StartButtonClick()
     {
         SceneManager.LoadSceneAsync("SampleScene");
+        Debug.Log("Started scene transition");
     }
 
 }

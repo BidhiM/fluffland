@@ -66,7 +66,7 @@ public class movement : MonoBehaviour
 
         for (int i = 0; i < otherPlayerAnims.Length; i++)
         {
-            if (otherPlayerAnims[i].name == PlayerPrefs.GetString("character"))
+            if (otherPlayerAnims[i].name.ToLower() == PlayerPrefs.GetString("character"))
                 animator.runtimeAnimatorController = otherPlayerAnims[i];
         }
 
