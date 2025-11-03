@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class CharacterButtonHandler : MonoBehaviour
 {
@@ -26,34 +27,54 @@ public class CharacterButtonHandler : MonoBehaviour
             return;
         }
 
-        berryDisplay.text = PlayerPrefs.GetInt("berries", 0).ToString();
         ChangeDisplayedName(selectionController.GetCurrentCharacterName()); // set it initially so its not blank
+        SetBerries();
         //set the berries
     }
-    public void rightButtonClick()
+    public void RightButtonClick()
     {
         selectionController.NavigateLeft();
     }
 
-    public void leftButtonClick()
+    public void LeftButtonClick()
     {
+        // don't question it man
         selectionController.NavigateRight();
     }
 
-    public void characterSelectButtonClick()
+    public void CharacterSelectButtonClick()
     {
-        if (!selected)
+        // only work if not selected already, and character is owned
+        if (!selected && selectionController.IsCurrentCharacterOwned())
         {
-            PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
-            Debug.Log("Current Character " + PlayerPrefs.GetString("character"));
-            SceneManager.LoadSceneAsync("MAINMENUNEW");
-            selected = true; // can't select more than once
+            StartCoroutine(ChangeScene());
         }
+    }
+
+    private IEnumerator ChangeScene(){
+        PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
+        Debug.Log("Current Character " + PlayerPrefs.GetString("character"));
+        yield return selectionController.SaveOwnedCharacters();
+        SceneManager.LoadSceneAsync("MAINMENUNEW");
+        selected = true; // can't select more than once
     }
 
     public void ChangeDisplayedName(string name)
     {
         characterNameDisplayField.text = name;
+    }
+
+    public void BuyButtonClick()
+    {
+        if(selectionController.TryBuyCharacter()){
+            Debug.Log("Bought");
+            Debug.Log(PlayerPrefs.GetString("ownedCharacters"));
+            SetBerries();
+        } else Debug.Log("Not enough berries");
+    }
+
+    private void SetBerries(){
+        berryDisplay.text = PlayerPrefs.GetInt("berries", 0).ToString();
     }
 
 }
