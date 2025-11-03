@@ -96,5 +96,6 @@ fmod_editor.log
 
 #final
 final/
+.utmp/
 
 .vscode
