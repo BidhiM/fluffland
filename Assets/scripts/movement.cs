@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEngine.Animations;
+using System.Collections.Generic;
 
 public class movement : MonoBehaviour
 {
@@ -13,6 +12,9 @@ public class movement : MonoBehaviour
     [SerializeField] private float maxVerticalSpeed = 5f;
     [SerializeField] private float holdingMultiplier = 2f;
     [SerializeField] private float collisionForce = 5f;
+
+    [Header("Player Animations")]
+    [SerializeField] private RuntimeAnimatorController[] otherPlayerAnims;
     [SerializeField] private Animator animator;
 
     [Header("Starting Settings")]
@@ -45,17 +47,35 @@ public class movement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
 
-        Debug.Log("Hello, WOrld!");
         angleInRadians = upwardAngle * Mathf.Deg2Rad;
         forwardDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
         currentSpeed = forwardSpeed;
         normalSize = transform.localScale;
 
         if (!animator) animator = GetComponent<Animator>();
-        if(!pipeScript) Debug.LogError("PipeAnimationController reference is missing!");
+        if (!pipeScript) Debug.LogError("PipeAnimationController reference is missing!");
 
         if (jumpTrail != null) jumpTrail.Stop();
         if (speedBoostTrail != null) speedBoostTrail.emitting = false; // Make sure it's off initially
+
+        if (otherPlayerAnims.Length <= 0)
+        {
+            Debug.LogError("otherPlayerAnims are not defined well");
+            return;
+        }
+
+        for (int i = 0; i < otherPlayerAnims.Length; i++)
+        {
+            if (otherPlayerAnims[i].name.ToLower() == PlayerPrefs.GetString("character"))
+                animator.runtimeAnimatorController = otherPlayerAnims[i];
+        }
+
+        if (!animator.runtimeAnimatorController)
+        {
+            Debug.Log("No animator controller set, check otherPlayerAnims and PlayerPrefs");
+            return;
+        }
+
     }
 
     void Update()
@@ -109,13 +129,10 @@ public class movement : MonoBehaviour
         animator.SetBool("isjumping", isHolding);
 
         if (isHolding || rb.linearVelocity.y > 0.1f)
-        {
             if (!jumpTrail.isPlaying) jumpTrail.Play();
-        }
         else
-        {
             if (jumpTrail.isPlaying) jumpTrail.Stop();
-        }
+        
     }
 
     private void ApplyForce(float force)
