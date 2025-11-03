@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dracoFixed_0: -2155769484138842129
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

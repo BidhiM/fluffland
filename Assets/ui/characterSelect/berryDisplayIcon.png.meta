@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      berryDisplayIcon_0: -3394243252933928339
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

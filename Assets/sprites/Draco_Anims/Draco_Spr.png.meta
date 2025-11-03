@@ -1,0 +1,549 @@
+fileFormatVersion: 2
+guid: 30a2eaa912661ab4784a148f9ef2e278
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2089089888685940557
+    second: Draco_Spr_0
+  - first:
+      213: -1046702336484638458
+    second: Draco_Spr_1
+  - first:
+      213: -5532624362876803290
+    second: Draco_Spr_2
+  - first:
+      213: 1506891041986544997
+    second: Draco_Spr_3
+  - first:
+      213: -1755277208739925741
+    second: Draco_Spr_4
+  - first:
+      213: 8305449128875216424
+    second: Draco_Spr_5
+  - first:
+      213: -5891057043513322318
+    second: Draco_Spr_6
+  - first:
+      213: -2752496679316392648
+    second: Draco_Spr_7
+  - first:
+      213: -7948202336409081209
+    second: Draco_Spr_8
+  - first:
+      213: 6362485047226510764
+    second: Draco_Spr_9
+  - first:
+      213: 4502557446375377744
+    second: Draco_Spr_10
+  - first:
+      213: 2854925762825095214
+    second: Draco_Spr_11
+  - first:
+      213: -1235983479866332363
+    second: Draco_Spr_12
+  - first:
+      213: 1804205336488241551
+    second: Draco_Spr_13
+  - first:
+      213: 4477432698059757421
+    second: Draco_Spr_14
+  - first:
+      213: -8848949917671421573
+    second: Draco_Spr_15
+  - first:
+      213: -3381862184732831333
+    second: Draco_Spr_16
+  - first:
+      213: 4668669854800519113
+    second: Draco_Spr_17
+  - first:
+      213: -1072101628182627369
+    second: Draco_Spr_18
+  - first:
+      213: -4629500649320218708
+    second: Draco_Spr_19
+  - first:
+      213: 2110136839900891030
+    second: Draco_Spr_20
+  - first:
+      213: 2374305976290840295
+    second: Draco_Spr_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Draco_Spr_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 734
+        width: 173
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f5cfe6f20fdfc10800000000000000
+      internalID: 2089089888685940557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 724
+        width: 182
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601034845cd5971f0800000000000000
+      internalID: -1046702336484638458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_2
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 721
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6276e0f747b2833b0800000000000000
+      internalID: -5532624362876803290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_3
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 720
+        width: 233
+        height: 215
+      alignment: 9
+      pivot: {x: 0.44801638, y: 0.4999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56583d83b6d89e410800000000000000
+      internalID: 1506891041986544997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_5
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 717
+        width: 265
+        height: 219
+      alignment: 9
+      pivot: {x: 0.36592856, y: 0.49262562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e4fa28af1e24370800000000000000
+      internalID: 8305449128875216424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_7
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 717
+        width: 292
+        height: 222
+      alignment: 9
+      pivot: {x: 0.3396109, y: 0.4781761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83577ef7ada2dc9d0800000000000000
+      internalID: -2752496679316392648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 358
+        width: 227
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53be056d297e8dee0800000000000000
+      internalID: -1235983479866332363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 345
+        width: 248
+        height: 220
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f89ee37c133d90910800000000000000
+      internalID: 1804205336488241551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_14
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 359
+        width: 237
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6712910159032e30800000000000000
+      internalID: 4477432698059757421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_15
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 363
+        width: 251
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7909f10fe6323580800000000000000
+      internalID: -8848949917671421573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 23
+        width: 227
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b915ca7c2463111d0800000000000000
+      internalID: -3381862184732831333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_17
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 25
+        width: 234
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf95fc4f727ac040800000000000000
+      internalID: 4668669854800519113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_18
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 19
+        width: 259
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db7e09df312f11f0800000000000000
+      internalID: -1072101628182627369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_19
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 3
+        width: 258
+        height: 223
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caff3d500b5b0cfb0800000000000000
+      internalID: -4629500649320218708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_20
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 10
+        width: 238
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69702c1a646b84d10800000000000000
+      internalID: 2110136839900891030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Draco_Spr_21
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 8
+        width: 248
+        height: 216
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee07e0b4ba33f020800000000000000
+      internalID: 2374305976290840295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 034788b3db5ce334f9693102481399c2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Draco_Spr_4: -839018543
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

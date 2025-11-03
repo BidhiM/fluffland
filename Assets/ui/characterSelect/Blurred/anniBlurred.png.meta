@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      anniBlurred_0: 3847314986813728708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
