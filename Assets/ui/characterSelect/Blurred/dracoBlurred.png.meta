@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dracoBlurred_0: 3733246205796691512
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -6,23 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
-    path: Assets/Scenes/SampleScene 1.unity
-    guid: 41dc90d24a59dd64b864908b55bd024a
-  - enabled: 1
-    path: Assets/Scenes/cake.unity
-    guid: 5e559d053ac768d468b72a21f8be3076
-  - enabled: 1
-    path: Assets/Scenes/respawningobstacle.unity
-    guid: 62a2651e62846c649b69952f3080ce02
-  - enabled: 1
     path: Assets/Scenes/MAINMENUNEW.unity
     guid: dda1355edc8ad3945a11808a86303b4a
   - enabled: 1
     path: Assets/Scenes/characterSelect.unity
     guid: 1dde09f160af34c41862f8eb35004636
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/respawningobstacle.unity
+    guid: 62a2651e62846c649b69952f3080ce02
+  - enabled: 0
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: 41dc90d24a59dd64b864908b55bd024a
+  - enabled: 0
+    path: Assets/Scenes/cake.unity
+    guid: 5e559d053ac768d468b72a21f8be3076
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ellyBlurred_0: -184742387525291090
+      ellyBlurred_1: -6624212042559568002
+      ellyBlurred_2: -6286713628077288806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
