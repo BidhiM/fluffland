@@ -49,7 +49,9 @@ public class CharacterSelectScript : MonoBehaviour
 
         // get the list of all the characters we own. gotta store it as a string
         string ownedCharacterRaw = PlayerPrefs.GetString("ownedCharacters").ToLower();
-        ownedCharacters = ownedCharacterRaw.Split(',').ToList(); 
+        ownedCharacters = ownedCharacterRaw.Split(',').ToList();
+        //default character should always be available
+        if (!ownedCharacters.Contains("thyme")) ownedCharacters.Add("thyme");
 
         // Load the saved character
         // read from playerprefs to see who we should start on.
