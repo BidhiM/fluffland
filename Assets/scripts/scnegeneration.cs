@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class SceneSpawnTrigger : MonoBehaviour
 {
-    public Transform nextPrefabSpawnPosition;  // Spawn position (set in Inspector)
     [Tooltip("The empty GameObject that marks where the new scene should be placed.")]
     public Transform spawnPosition;
     private bool hasBeenTriggered = false;
