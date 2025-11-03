@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      thymeFIxed_0: 4592257304942893727
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -17,6 +17,7 @@ public class MainMenuController : MonoBehaviour
     void Start()
     {
         currentCharacter = PlayerPrefs.GetString("character");
+        if(currentCharacter.Length == 0) currentCharacter = "thyme";
 
         // null checking and error logging
         if (currentCharacter == null)

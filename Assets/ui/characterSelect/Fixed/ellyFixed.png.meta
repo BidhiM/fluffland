@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ellyFixed_0: -4826821342652946119
+      ellyFixed_1: -1835630416971713249
+      ellyFixed_2: 2692590325200871911
+      ellyFixed_3: -2872281744372651021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

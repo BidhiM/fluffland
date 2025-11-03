@@ -1,5 +1,9 @@
 using UnityEngine;
+using System;
+using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 // alright buckle up, this is the character select screen.
 // to get this roulette thing working. dont touch it. 
@@ -9,12 +13,14 @@ public class CharacterSelectScript : MonoBehaviour
     // --- INSPECTOR STUFF, anYONE TOUCHING THIS BUYS ME COFFEE ---
     [SerializeField] private GameObject[] charactersFixed; // drag all the character prefabs here. if you miss one, it's not my problem.
     [SerializeField] private GameObject[] charactersBlurred; // if the characters aren't in the same order, your issue LLLL
+    [SerializeField] private int[] characterPrices = {5, 5, 5, 5, 5};
     [SerializeField] private Vector2 leftPosition = new Vector2(-715f, -182f); // where the left guy stands awkwardly
     [SerializeField] private Vector2 middlePosition = new Vector2(31f, 12f); // the star of the show
     [SerializeField] private Vector2 rightPosition = new Vector2(715f, -182f); // where the right guy stands awkwardly
     [SerializeField] private float transitionDuration = 0.25f; // how fast they yeet across the screen. 0.25f feels snappy enough. dont make it too slow.
     [SerializeField] private float offscreenBufferX = 400f; // how far off the screen we chuck em so nobody sees them spawning in. magic.
     [SerializeField] private CharacterButtonHandler characterButtonHandler;
+    private List<string> ownedCharacters; 
 
     // --- INTERNAL STATE, AKA THE MESS ---
     private bool isTransitioning = false; // are we currently in the middle of the big shuffle? yes/no
@@ -29,9 +35,9 @@ public class CharacterSelectScript : MonoBehaviour
     void Start()
     {
         // quick safety check
-        if (charactersFixed.Length != charactersBlurred.Length)
+        if ((charactersFixed.Length != charactersBlurred.Length) && (charactersFixed.Length != characterPrices.Length))
         {
-            Debug.LogError("CRITICAL ERROR: 'charactersFixed' and 'charactersBlurred' arrays are not the same length. This will explode. Go fix it. Now.");
+            Debug.LogError("CRITICAL ERROR: 'charactersFixed' and 'charactersBlurred' and 'characterPrices' must be the same length. Fix it");
             return;
         }
 
@@ -41,7 +47,13 @@ public class CharacterSelectScript : MonoBehaviour
             return;
         }
 
-        // --- NEW LOGIC: Load the saved character ---
+        // get the list of all the characters we own. gotta store it as a string
+        string ownedCharacterRaw = PlayerPrefs.GetString("ownedCharacters").ToLower();
+        ownedCharacters = ownedCharacterRaw.Split(',').ToList();
+        //default character should always be available
+        if (!ownedCharacters.Contains("thyme")) ownedCharacters.Add("thyme");
+
+        // Load the saved character
         // read from playerprefs to see who we should start on.
         string savedCharacterName = PlayerPrefs.GetString("character");
         if (!string.IsNullOrEmpty(savedCharacterName))
@@ -58,8 +70,6 @@ public class CharacterSelectScript : MonoBehaviour
                 }
             }
         }
-        // --- END NEW LOGIC ---
-
 
         // just throw everyone where they're supposed to be at the start. the calm before the storm.
         // middle guy in the middle, left on left, right on right. everyone else? NARNIA.
@@ -68,7 +78,15 @@ public class CharacterSelectScript : MonoBehaviour
         {
             charactersFixed[i].SetActive(true);
             charactersBlurred[i].SetActive(true);
-            //turn them on if they aren't on
+            // turn them on if they aren't on, which they will not in fact be
+
+            // basically if the character is not owned
+            if (!ownedCharacters.Contains(charactersFixed[i].name))
+            {
+                // make them black (silhouette type appearance)
+                charactersFixed[i].GetComponent<Image>().color = Color.black;
+                charactersBlurred[i].GetComponent<Image>().color = Color.black;
+            }
 
             if (i == currentIndex)
             {
@@ -96,7 +114,6 @@ public class CharacterSelectScript : MonoBehaviour
             }
         }
         
-        // --- NEW ---
         // Make sure the nameplate is correct on launch.
         ChangeDisplayedCharacterName();
     }
@@ -112,15 +129,9 @@ public class CharacterSelectScript : MonoBehaviour
 
         // otherwise, check if the player is mashing buttons
         if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            // Just call the new public method. Clean.
             NavigateLeft();
-        }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            // Same here. Nice.
             NavigateRight();
-        }
     }
 
     // --- NEW PUBLIC METHODS ---
@@ -265,7 +276,6 @@ public class CharacterSelectScript : MonoBehaviour
                 Vector2 spawnPos = new Vector2(spawnX, finalPos.y);
                 SetLocalPosition(i, spawnPos); // BAMF. they appear (both of them)
 
-                // --- NEW LOGIC ---
                 // Activate the correct one *before* it slides in.
                 if(finalPos == middlePosition) SetActiveState(i, true, false);
                 else SetActiveState(i, false, true);
@@ -283,7 +293,6 @@ public class CharacterSelectScript : MonoBehaviour
                 transitionStartPositions[i] = currentPos;
                 transitionTargetPositions[i] = new Vector2(exitX, currentPos.y); // target is just off screen
                 
-                // --- NEW LOGIC ---
                 // Ensure the *correct* one is active *while* it exits.
                 // It should already be in this state, but better safe than sorry.
                 if(currentPos == middlePosition) SetActiveState(i, true, false);
@@ -305,7 +314,6 @@ public class CharacterSelectScript : MonoBehaviour
 
     // --- UTILITIES, AKA THE BORING MATH STUFF ---
     
-    // --- NEW HELPERS ---
     // these helpers now manage BOTH the fixed and blurred objects for a given index.
     
     // sets the active state for the fixed/blurred pair
@@ -367,12 +375,40 @@ public class CharacterSelectScript : MonoBehaviour
     public void ChangeDisplayedCharacterName()
     {
         //no need for a check, checking in start alr
-        characterButtonHandler.ChangeDisplayedName(GetCurrentCharacterName());
+        if(IsCurrentCharacterOwned())
+            characterButtonHandler.ChangeDisplayedName(GetCurrentCharacterName());
+        else 
+            characterButtonHandler.ChangeDisplayedName("");
     }
 
     public string GetCurrentCharacterName()
     {
         return charactersFixed[currentIndex].name.Replace("Fixed", "");
+    }
+    public bool IsCurrentCharacterOwned()
+    {
+        return ownedCharacters.Contains(GetCurrentCharacterName());
+    }
+    public bool TryBuyCharacter(){
+        Debug.Log("Trying to buy " + GetCurrentCharacterName());
+        Debug.Log("Current index " + currentIndex);
+        if((PlayerPrefs.GetInt("berries") >= characterPrices[currentIndex]) && !IsCurrentCharacterOwned()){
+            PlayerPrefs.SetInt("berries", PlayerPrefs.GetInt("berries") - characterPrices[currentIndex]);
+            ownedCharacters.Add(GetCurrentCharacterName());
+            charactersFixed[currentIndex].GetComponent<Image>().color = Color.white;
+            charactersBlurred[currentIndex].GetComponent<Image>().color = Color.white;
+            string ownedChractersRaw = string.Join(",", ownedCharacters);
+            PlayerPrefs.SetString("ownedCharacters", ownedChractersRaw.ToLower());
+            return true;
+        }
+        return false;
+    }
+
+    public IEnumerator SaveOwnedCharacters(){
+        string ownedChractersRaw = string.Join(",", ownedCharacters);
+        PlayerPrefs.SetString("ownedCharacters", ownedChractersRaw.ToLower());
+        PlayerPrefs.Save();
+        yield return null;
     }
     
     // --- ORIGINAL HELPERS ---
