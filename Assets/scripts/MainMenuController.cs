@@ -16,6 +16,7 @@ public class MainMenuController : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("berries", 100); //debug )
         currentCharacter = PlayerPrefs.GetString("character");
         if(currentCharacter.Length == 0) currentCharacter = "thyme";
 
@@ -65,7 +66,13 @@ public class MainMenuController : MonoBehaviour
         foreach (GameObject character in characters)
         {
             if (character.name == currentCharacter)
+            {
                 character.SetActive(true);
+                if(character.name == "draco")
+                {
+                    character.GetComponent<Animator>().SetBool("idling", true);
+                }
+            }
             else
                 character.SetActive(false);
         }
