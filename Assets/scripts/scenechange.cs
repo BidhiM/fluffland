@@ -33,11 +33,11 @@ public class scenechange : MonoBehaviour
         }
 
         // Get all lights in the scene
-        sceneLights = FindObjectsOfType<Light2D>();
-        globalLight = FindObjectOfType<Light2D>(); // Assuming one global light exists
+        sceneLights = FindObjectsByType<Light2D>(FindObjectsSortMode.None);
+        globalLight = FindFirstObjectByType<Light2D>(); // Assuming one global light exists
 
         // Get global volume and post-processing effects
-        globalVolume = FindObjectOfType<Volume>();
+        globalVolume = FindFirstObjectByType<Volume>();
         if (globalVolume != null && globalVolume.profile != null)
         {
             globalVolume.profile.TryGet(out bloom);
