@@ -7,18 +7,18 @@ public class respawning : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Obstacle"))
         {
-            SceneManager.LoadScene("respawningobstacle");
+            SceneLoader.Load("respawningobstacle");
         }
     }
 
     public void Retry()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneLoader.Load("SampleScene");
     }
 
     public void LoadMainMenu()
     {
-        SceneManager.LoadScene("MAINMENUNEW");
+        SceneLoader.Load("MAINMENUNEW");
     }
 
 }

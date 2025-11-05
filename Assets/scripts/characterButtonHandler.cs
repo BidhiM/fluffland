@@ -59,7 +59,7 @@ public class CharacterButtonHandler : MonoBehaviour
         PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
         Debug.Log("Current Character " + PlayerPrefs.GetString("character"));
         yield return selectionController.SaveOwnedCharacters();
-        SceneManager.LoadSceneAsync("MAINMENUNEW");
+        SceneLoader.Load("MAINMENUNEW");
         selected = true; // can't select more than once
     }
 

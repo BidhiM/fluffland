@@ -83,13 +83,12 @@ public class MainMenuController : MonoBehaviour
 
     public void CharacterSelectButtonClick()
     {
-        SceneManager.LoadSceneAsync("characterSelect");
+        SceneLoader.Load("characterSelect");
     }
 
     public void StartButtonClick()
     {
-        SceneManager.LoadSceneAsync("SampleScene");
-        Debug.Log("Started scene transition");
+        SceneLoader.Load("SampleScene", useBlackFade: false);
     }
 
 }
