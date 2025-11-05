@@ -182,8 +182,6 @@ public class CharacterSelectScript : MonoBehaviour
         ChangeDisplayedCharacterName();
     }
 
-    // ----------------------------
-
 
     private void HandleTransition()
     {
@@ -374,11 +372,8 @@ public class CharacterSelectScript : MonoBehaviour
 
     public void ChangeDisplayedCharacterName()
     {
-        //no need for a check, checking in start alr
-        if(IsCurrentCharacterOwned())
-            characterButtonHandler.ChangeDisplayedName(GetCurrentCharacterName());
-        else 
-            characterButtonHandler.ChangeDisplayedName("");
+        // display the name regardless. 
+        characterButtonHandler.ChangeDisplayedName(GetCurrentCharacterName());
     }
 
     public string GetCurrentCharacterName()

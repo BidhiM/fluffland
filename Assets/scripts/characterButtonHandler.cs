@@ -2,12 +2,15 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.UI;
 
 public class CharacterButtonHandler : MonoBehaviour
 {
     [SerializeField] private CharacterSelectScript selectionController;
     [SerializeField] private TMP_Text characterNameDisplayField;
     [SerializeField] private TMP_Text berryDisplay;
+    [SerializeField] private Image notEnoughBerriesOverlay;
+
     private bool selected = false;
     void Start()
     {
@@ -51,7 +54,8 @@ public class CharacterButtonHandler : MonoBehaviour
         }
     }
 
-    private IEnumerator ChangeScene(){
+    private IEnumerator ChangeScene()
+    {
         PlayerPrefs.SetString("character", selectionController.GetCurrentCharacterName());
         Debug.Log("Current Character " + PlayerPrefs.GetString("character"));
         yield return selectionController.SaveOwnedCharacters();
@@ -66,15 +70,22 @@ public class CharacterButtonHandler : MonoBehaviour
 
     public void BuyButtonClick()
     {
-        if(selectionController.TryBuyCharacter()){
+        if (selectionController.TryBuyCharacter())
+        {
             Debug.Log("Bought");
             Debug.Log(PlayerPrefs.GetString("ownedCharacters"));
             SetBerries();
-        } else Debug.Log("Not enough berries");
+        }
+        else notEnoughBerriesOverlay.gameObject.SetActive(true);
     }
 
-    private void SetBerries(){
+    private void SetBerries()
+    {
         berryDisplay.text = PlayerPrefs.GetInt("berries", 0).ToString();
     }
 
+    public void CloseNotEnoughBerriesOverlay()
+    {
+        notEnoughBerriesOverlay.gameObject.SetActive(false);
+    }
 }

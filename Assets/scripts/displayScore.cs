@@ -4,8 +4,17 @@ using UnityEngine;
 public class displayScore : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private GameObject[] characterUIObjects;
     void Start(){
-
+        // prolly shouldn't do this here but don't care enough
+        string character = PlayerPrefs.GetString("character"); 
+        foreach (GameObject obj in characterUIObjects)
+        {
+            if (obj.name.ToLower() == character.ToLower())
+                obj.SetActive(true);
+            else
+                obj.SetActive(false);
+        }
         if (scoreText.CompareTag("scoreDisplay"))
         {
             scoreText.text = ScoreManager.getScore().ToString();
