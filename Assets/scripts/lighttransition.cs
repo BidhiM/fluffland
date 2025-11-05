@@ -17,7 +17,7 @@ public class lighttransition : MonoBehaviour
     void Start()
     {
         if (globalLight == null)
-            globalLight = FindObjectOfType<Light2D>(); // Auto-find global light
+            globalLight = FindFirstObjectByType<Light2D>(); // Auto-find global light
 
         if (globalVolume.profile.TryGet(out vignette))
             vignette.intensity.value = 0.5f; // Start with strong vignette
